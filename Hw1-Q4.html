@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Hw1-Q4</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="icon" type="image/x-icon" href="images/logo3.jpg">
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <div id="header">
+
+                <!-- Logo -->
+                <h1><a href="index.html" id="logo"><img src="images/logo3.jpg" class="logoclass"  alt="logo"/> <em style="vertical-align: middle;">Mert Özhan - ELE124 Homework</em></a></h1>
+
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Hw1-Q1.html">Hw1-Q1</a></li>
+                        <li><a href="Hw1-Q2.html">Hw1-Q2</a></li>
+                        <li><a href="Hw1-Q3.html">Hw1-Q3</a></li>
+                        <li class="current"><a href="Hw1-Q4.html">Hw1-Q4</a></li>
+                    </ul>
+                </nav>                
+
+            </div>
+
+            <!-- Main -->
+            <section class="wrapper style1">
+                <div class="container">
+                        <div id="content">
+
+                            <!-- Content -->
+
+                            <article>
+                                <header>
+                                        <h2>ELE 124 Computer Programming Hw1-Q4</h2>
+                                </header>
+
+                                <!--
+                                <span class="image featured"><img src="images/banner.jpg" alt="" /></span>
+                                -->
+                                <h3>Q4- Now solve the same problem using functions. Use the following prototypes:</h3>
+                                <p><span style="font-weight: bold;">a)</span>	int computeHomeValue (int popularity, int size)<br>
+                                <span style="font-weight: bold;">b)</span>	void computeHomeValue (void)</p>
+                                <p>Notice that for part b, all printf/scanf should take place within the function.</p>
+                                
+                                <h3>Answer a:</h3>
+                                
+                                <pre class='brush: cpp'>                                
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;math.h&gt;
+
+int computeHomeValue(popularity, size);
+
+int main() {
+	
+	int popularity, size;
+	
+	printf("Enter popularity: ");
+	scanf("%d", &popularity);
+	
+	printf("Enter size: ");
+	scanf("%d", &size);
+	
+	printf("Home value is: %d", computeHomeValue(popularity, size)); 	
+	
+	return 0;
+
+}
+
+int computeHomeValue(int popularity, int size) {
+
+	return ((pow(popularity, 3) + pow(size, 2)) * 10000);
+
+}
+                                </pre>
+                                <br>
+                                <h3>Answer b:</h3>
+                                
+                                <pre class='brush: cpp'>                                
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;math.h&gt;
+
+void computeHomeValue(void);
+
+int main() {
+	
+	computeHomeValue();
+	return 0;
+
+}
+
+void computeHomeValue(void) {
+	
+	int popularity, size, homeValue;
+	
+	printf("Enter popularity: ");
+	scanf("%d", &popularity);
+	
+	printf("Enter size: ");
+	scanf("%d", &size);
+	
+	homeValue = (pow(popularity, 3) + pow(size, 2)) * 10000;
+	
+	printf("Home value is: %d", homeValue);
+
+}
+                                </pre>
+                                
+                           </article>
+
+                        </div>
+                    </div>
+            </section>
+
+            <!-- Footer -->
+            <div id="footer">
+                <!-- Copyright -->
+                <div class="copyright">
+                    <ul class="menu">
+                        <li>&copy; 2025 Mert ÖZHAN All rights reserved</li>
+                        <li>I'm hosted with GitHub Pages.</li>
+                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
